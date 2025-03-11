@@ -1,0 +1,18 @@
+{
+  "name": "npm-repo",
+  "workspaces": [
+    "infra/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "npm run start:backend & npm run start:frontend",
+    "start:backend": "npm run start -w infra/backend",
+    "start:frontend": "npm run start -w infra/frontend",
+    "build:dtos": "npm run build -w packages/dtos",
+    "build:domain": "npm run build -w packages/domain",
+    "build:application": "npm run build -w packages/application",
+    "build:packages": "npm run build:dtos && npm run build:domain && npm run build:application",
+    "build:backend": "npm run build:packages && npm run build -w infra/backend",
+    "build:frontend": "npm run build:dtos && npm run build -w infra/frontend"
+  }
+}

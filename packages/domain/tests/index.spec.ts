@@ -1,0 +1,1 @@
+import { example } from '../src/index'; test('example function', () => { expect(example()).toBe('Hello Domain'); });

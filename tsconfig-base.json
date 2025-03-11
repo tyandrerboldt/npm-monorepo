@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "declaration": true,
+    "incremental": true,
+    "target": "ES2023",
+    "sourceMap": true,
+    "composite": true,
+    "strict": true,
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "tsBuildInfoFile": "./out-tsc/tsconfig.tsbuildinfo"
+  }
+}
