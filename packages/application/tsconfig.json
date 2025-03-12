@@ -4,9 +4,10 @@
     "rootDir": "src",
     "outDir": "dist",
     "paths": {
+      "@/*": ["./src/*"],
       "@repo/domain/*": ["../domain/dist/*"],
       "@repo/dtos/*": ["../dtos/dist/*"]
-    },
+    }
   },
-  "include": ["src/**/*", "../jest.config.ts"],
+  "include": ["src/**/*", "../jest.config.ts"]
 }

@@ -36,9 +36,9 @@ describe("Organization", () => {
     try {
       organization.validate(new ThrowsValidationHandler());
       throw new Error("Not validated");
-    } catch (error) {
+    } catch (error: any) {
       expect(error).toBeInstanceOf(DomainException);
-      expect(error.message).toBe("'title' should not be null");
+      expect(error?.message).toBe("'title' should not be null");
     }
   });
 
@@ -56,7 +56,7 @@ describe("Organization", () => {
     try {
       organization.validate(new ThrowsValidationHandler());
       throw new Error("Not validated");
-    } catch (error) {
+    } catch (error: any) {
       expect(error).toBeInstanceOf(DomainException);
       expect(error.message).toBe("'title' must be greater than 3 characteres");
     }
@@ -78,9 +78,9 @@ describe("Organization", () => {
     try {
       organization.validate(new ThrowsValidationHandler());
       throw new Error("Not validated");
-    } catch (error) {
+    } catch (error: any) {
       expect(error).toBeInstanceOf(DomainException);
-      expect(error.message).toBe("'title' must be between 4 and 100 characters");
+      expect(error?.message).toBe("'title' must be between 4 and 100 characters");
     }
   });
 
